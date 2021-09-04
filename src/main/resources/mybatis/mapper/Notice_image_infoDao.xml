@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 공지사항 이미지 정보 notice_image_info 테이블 xml -->
+
+<mapper namespace="com.study.springboot.dao.INotice_image_infoDao"> 
+
+	<!-- 
+	
+	[ insert / update / delete ] 문은 실행 후 result type을 넣지 않아도 수행된 행의 수를 리턴한다.
+	
+		1개 컬럼 [ insert / update / delete ] => 1
+		2개 컬럼 [ insert / update / delete ] => 2
+	
+	
+	<select id="sql이름" resultType="반환값"> 
+		SELECT 쿼리
+	</select>
+
+	<insert id="addMember">
+		INSERT INTO COMPANY_MEMBER(MEMBER_IDX, MEMBER_ID, MEMBER_PW, MEMBER_NAME, MEMBER_EMAIL, MEMBER_EMAIL_RECEIVE, MEMBER_PW_QUESTION, MEMBER_PW_ANSWER, MEMBER_GENDER, MEMBER_BIRTH_DATE, MEMBER_JOIN_DATE)
+		VALUES(COMPANY_MEMBER_SEQ.nextval, #{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7}, #{param8}, #{param9}, SYSDATE)
+	</insert>
+	-->
+	
+	<select id="list" resultType="com.study.springboot.dto.NoticeDto"> 
+		SELECT * FROM notice_image_info ORDER BY image_no
+	</select>
+
+</mapper>

@@ -1,0 +1,14 @@
+--system 사용자로 접속해서 아래 명령어들을 실행한다.
+--사용자 생성 및 권한 부여
+CREATE USER tmr_db
+IDENTIFIED BY 1234
+DEFAULT TABLESPACE USERS
+TEMPORARY TABLESPACE TEMP;
+​
+GRANT CONNECT TO tmr_db;
+GRANT RESOURCE TO tmr_db;
+GRANT DBA TO tmr_db;
+​
+--tmr_db 데이터베이스(사용자) 생성 완료.
+COMMIT;
+
